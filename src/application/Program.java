@@ -12,9 +12,7 @@ public class Program {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
         List<TaxPlayer> list = new ArrayList<>();
-
 
         System.out.print("Enter the number of tax players: ");
         int n = sc.nextInt();
@@ -39,7 +37,7 @@ public class Program {
                 System.out.print("Anual income: ");
                 Double anualIncoming = sc.nextDouble();
                 System.out.print("Number of employees: ");
-                Double numberOfEmployees = sc.nextDouble();
+                Integer numberOfEmployees = sc.nextInt();
                 //Company company = new Company(name, anualIncoming, numberOfEmployees);
                 list.add(new Company(name, anualIncoming, numberOfEmployees));
             }
@@ -50,9 +48,10 @@ public class Program {
         System.out.println("\nTAXES PAID: ");
         for (TaxPlayer tp : list) {
             System.out.println("Name: " + tp.getName() + " | Tax: $" + String.format("%.2f", tp.tax()));
-             sum += tp.tax();
+            sum += tp.tax();
         }
 
         System.out.printf("Total Taxes: %.2f", sum);
+        sc.close();
     }
 }

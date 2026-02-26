@@ -1,26 +1,19 @@
-/*
-Pessoa jurídica: pessoas jurídicas pagam 16% de imposto. Porém, se a empresa possuir mais de 10
-funcionários, ela paga 14% de imposto.
-Exemplo: uma empresa cuja renda foi 400000.00 e possui 25 funcionários, o imposto fica:
-400000 * 14% = 56000.00
-*/
-
 package entities;
 
 public class Company extends TaxPlayer {
 
-   private Double numberOfEmployees;
+    private Integer numberOfEmployees;
 
-    public Company(String name, Double anualIncoming, Double numberOfEmployees) {
+    public Company(String name, Double anualIncoming, Integer numberOfEmployees) {
         super(name, anualIncoming);
         this.numberOfEmployees = numberOfEmployees;
     }
 
-    public Double getNumberOfEmployees() {
+    public Integer getNumberOfEmployees() {
         return numberOfEmployees;
     }
 
-    public void setNumberOfEmployees(Double numberOfEmployees) {
+    public void setNumberOfEmployees(Integer numberOfEmployees) {
         this.numberOfEmployees = numberOfEmployees;
     }
 
@@ -31,6 +24,5 @@ public class Company extends TaxPlayer {
         } else {
             return getAnualIncoming() * 0.16;
         }
-
     }
 }
