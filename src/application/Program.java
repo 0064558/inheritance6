@@ -31,8 +31,8 @@ public class Program {
                 Double anualIncoming = sc.nextDouble();
                 System.out.print("Health expenditures: ");
                 Double healthExpenditures = sc.nextDouble();
-                TaxPlayer individual = new Individual(name, anualIncoming, healthExpenditures);
-                list.add(individual);
+                //Individual individual = new Individual(name, anualIncoming, healthExpenditures);
+                list.add(new Individual(name, anualIncoming, healthExpenditures));
             } else if (resp.equals("c")) {
                 System.out.print("Name: ");
                 String name = sc.nextLine();
@@ -40,8 +40,8 @@ public class Program {
                 Double anualIncoming = sc.nextDouble();
                 System.out.print("Number of employees: ");
                 Double numberOfEmployees = sc.nextDouble();
-                TaxPlayer company = new Company(name, anualIncoming, numberOfEmployees);
-                list.add(company);
+                //Company company = new Company(name, anualIncoming, numberOfEmployees);
+                list.add(new Company(name, anualIncoming, numberOfEmployees));
             }
         }
 
