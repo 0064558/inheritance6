@@ -18,3 +18,7 @@ Exemplo:
 - Se a empresa possuir mais de 10 funcionários, paga `14%` de imposto.
 
 Aplicação dos conceitos de herança e polimorfismo com as classes `TaxPlayer`, `Individual` e `Company`.
+
+
+## Terminal
+![img.png](img.png)
